@@ -1,5 +1,5 @@
 import React from 'react';
-import GoogleMapReact from 'google-map-react';
+import GoogleMpaReact from 'google-map-react';
 import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
@@ -13,8 +13,8 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked, weatherDat
 
   return (
     <div className={classes.mapContainer}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API_KEY }}
+      <GoogleMpaReact
+        bootstrapURLKeys={{ key: 'AIzaSyCc6Sarmym2xLTabUAI29fvST0zGloS-Ic' }}
         defaultCenter={coords}
         center={coords}
         defaultZoom={14}
@@ -52,7 +52,7 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked, weatherDat
             <img src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`} height="70px" />
           </div>
         ))}
-      </GoogleMapReact>
+      </GoogleMpaReact>
     </div>
   );
 };
